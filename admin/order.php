@@ -210,8 +210,8 @@ class Order {
                     switch ( $item_type ) {
                         case LP_COURSE_CPT:
                             $course                     = learn_press_get_course( $item['item_id'] );
-                            $item['subtotal']           = apply_filters( 'learnpress/order/item/subtotal', $course->get_price() * $item['quantity'], $course, $item );
-                            $item['total']              = apply_filters( 'learnpress/order/item/total', $course->get_price() * $item['quantity'], $course, $item );
+                            $item['subtotal']           = apply_filters( 'learnpress/order/item/subtotal', floatval( $course->get_price() ) * intval( $item['quantity'] ), $course, $item );
+                            $item['total']              = apply_filters( 'learnpress/order/item/total', floatval( $course->get_price() ) * intval( $item['quantity'] ), $course, $item);
                             $item['order_item_name']    = apply_filters( 'learnpress/order/item/title', $course->get_title(), $course, $item );
                             $item['meta']['_course_id'] = $item['item_id'];
                             break;

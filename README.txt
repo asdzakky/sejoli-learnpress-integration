@@ -33,6 +33,9 @@ Coming soon
 
 == Changelog ==
 
+= 1.1.2
+* Fix bug assign course and notification not working
+
 = 1.1.1
 * Fix bug course list & course not enroll after purchased with sejoli
 
